@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>E-Commerce | Orders</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../public/css/fonts.css">
+        <link rel="stylesheet" href="../public/css/order.css">
+    </head>
+    <body>
+        <a href="/cart" class="back"><img src="../public/images/arrow-left-long-solid.svg" alt="back"></a>
+
+        <form action="/placeorder" method="post" autocomplete="off">
+            <p class="header">Fill the details<br>to Place Order</p>
+
+            <div class="label"><p>Username</p><p>&nbsp*</p></div>
+            <input type="text" name="USERNAME" placeholder="e.g. Tatya Vinchu">
+
+            <div class="label"><p>Email-Id</p><p>&nbsp*</p></div>
+            <input type="text" name="EMAIL" placeholder="e.g. TatyaVinchu@gmail.com">
+
+            <div class="label"><p>Phone Number</p><p>&nbsp*</p></div>
+            <div class="pno"><p>+91</p><input type="number" name="PHNO" style="margin:auto auto auto 0px"></div>
+
+            <div class="label"><p>Address</p><p>&nbsp*</p></div>
+            <textarea name="ADDRESS"></textarea>
+
+            <div class="label"><p>Payment Mode</p><p>&nbsp*</p></div>
+            <div class="mode">
+                <div class="pay">
+                    <img src="../public/images/cash.png" alt="cash">
+                    <div><p class="val">Cash On Delivery</p><p>Pay conviniently to the Delivery Person</p></div>
+                    <img src="../public/images/caret-down-solid.svg" alt="down">
+                </div>
+                <img src="../public/images/caret-down-solid.svg" alt="down" class="down">
+                <div class="pay">
+                    <img src="../public/images/netbank.png" alt="cash">
+                    <div><p class="val">Netbanking</p><p>Pay conviniently to the Delivery Person</p></div>
+                    <img src="../public/images/caret-down-solid.svg" alt="down">
+                </div>
+                <div class="pay">
+                    <img src="../public/images/UPI.webp" alt="cash">
+                    <div><p class="val">UPI Payment</p><p>Pay conviniently to the Delivery Person</p></div>
+                    <img src="../public/images/caret-down-solid.svg" alt="down">
+                </div>
+                <div class="pay">
+                    <img src="../public/images/debitcard1.png" alt="cash">
+                    <div><p class="val">Credit Card</p><p>Pay conviniently to the Delivery Person</p></div>
+                    <img src="../public/images/caret-down-solid.svg" alt="down">
+                </div>
+                <div class="pay">
+                    <img src="../public/images/creditcard.png" alt="cash">
+                    <div><p class="val">Debit Card</p><p>Pay conviniently to the Delivery Person</p></div>
+                    <img src="../public/images/caret-down-solid.svg" alt="down">
+                </div>
+            </div>
+            <input name="payment" type="hidden" value="cash_on_delivery">
+
+            <input type="submit" value="Place Order">
+            <input name="date" type="hidden" value="null">
+        </form>
+
+        <script src="../public/js/order.js"></script>
+    </body>
+</html>

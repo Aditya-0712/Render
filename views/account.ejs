@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>E-Commerce | Account</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts.css">
+        <link rel="stylesheet" href="../css/account.css">
+    </head>
+    <body>
+        <a href="/home" class="back"><img src="../images/arrow-left-long-solid.svg" alt="back"></a>
+
+        <p class="abt">Account Details</p>
+        <div class="ans"><p>Username :</p><p>&nbsp&nbsp <%= name %></p></div>
+        <div class="ans"><p>Email-Id :</p><p>&nbsp&nbsp <%= email %></p></div>
+        <div class="ans"><p>Password :</p><p>&nbsp&nbsp <%= password %></p></div>
+
+        <a href='/logout'class="addtocart"><p>Logout</p><img src="../images/inbox-solid.svg" alt="cart"></a>
+
+        <p class="abt">Your Orders</p>
+
+        <div class="all">
+            <% for (let i=0; i<arr.length; i++) { %>
+                <div class="invoice">
+                    <p class="header"><%= arr[i].Products.length %> Item(s) Ordered</p>
+                    <div class="label">
+                        <p>Ordered On:</p><p>&nbsp <%= arr[i].Order_date %></p>
+                    </div>
+                    <div class="label">
+                        <p>Order ID:</p><p>&nbsp <%= arr[i].Order_Id %></p>
+                    </div>
+                    <div class="label">
+                        <p>Delivery By:</p><p>&nbsp Tomorrow</p>
+                    </div>
+                    <a href="/ordDet/<%= arr[i].Order_Id %>" class="det">Check Details</a>
+                </div>
+            <% } %>
+        </div>
+        
+    </body>
+</html>

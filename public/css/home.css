@@ -1,0 +1,402 @@
+*{-webkit-tap-highlight-color: transparent; display:flex; text-decoration: none;}
+
+head{display: none;}
+
+body
+{
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    font-size: 0;
+}
+
+.mob_topbar
+{
+    width:100%;
+    margin:20px 0px 0px 0px;
+}
+
+.search
+{
+    margin:auto;
+    border-radius: 10px;
+    border:1px solid rgba(114, 114, 114, 0.5);
+    padding:10px 7px 10px 7px;
+    background-color: white;
+    transition-property: border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.search img
+{
+    width: 20px;
+    height: 20px;
+    margin:auto 0px auto 5px;
+}
+
+.search input 
+{
+    width:200px;
+    background-color: transparent;
+    border:none;
+    margin:auto 0px auto 10px;
+    font:12px Montserrat-Medium;
+    color:black;
+}
+
+.search input::placeholder{font:12px Montserrat-Regular;}
+
+.search input:focus{outline: none;}
+
+.options
+{
+    cursor: pointer;
+    width:25px;
+    height: 25px;
+    margin:auto;
+}
+
+.slide 
+{
+    flex-direction: column;
+    width:92%;
+    height: auto;
+    margin:30px auto 0px auto;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slide img 
+{
+    width: 100%;
+    height: auto;
+    margin:0;
+}
+
+.slide p 
+{
+    font:15px Montserrat-Medium;
+    color:white;
+    background-color: #3a3a3a;
+    margin:0px 0px -34.64px auto;
+    padding: 8px 20px 8px 15px;
+    position: relative;
+    border-radius: 10px 0px 0px 10px;
+    bottom:47px;
+}
+
+.category
+{
+    width:100%;
+    margin:20px 0px 0px 0px;
+}
+
+.category div 
+{
+    flex-direction: column;
+    margin:0px auto 0px 17px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.category div:nth-child(2)
+{
+    margin:0px 17px 0px auto;
+}
+
+.category div img 
+{
+    width:165px;
+    height: auto;
+    margin:0;
+}
+
+.category div p 
+{
+    display: block;
+    font:15px Montserrat-Medium;
+    color:white;
+    padding:8px 0px 8px 0px;
+    background-color: #3a3a3a;
+    margin:0;
+    width:100%;
+    text-align: center;
+}
+
+.wall
+{
+    width: 95%;
+    max-width: 95%;
+    margin:40px auto 0px auto;
+}
+
+.wall div 
+{
+    flex-direction: column;
+    margin:0px auto auto auto;
+    cursor: pointer;
+    width:70px;
+    height: 65px;
+    border-radius: 10px;
+    background-color: rgb(255,235,229);
+}
+
+.wall div img 
+{
+    width:25px;
+    height: 25px;
+    margin:auto;
+}
+
+.wall div p 
+{
+    font:12px Montserrat-Regular;
+    color:#3a3a3a;
+    margin:auto;
+}
+
+.shop
+{
+    margin:30px auto 0px auto;
+    max-width: 92%;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.item 
+{
+    flex-direction: column;
+    margin:0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.prod_img 
+{
+    width:160px;
+    height: 175px;
+    margin:0;
+    border-bottom: 1px solid rgba(114, 114, 114, 0.5);
+}
+
+.stars
+{
+    height:15px;
+    width: auto;
+    margin:10px auto 0px 5px;
+}
+
+.name, .brand, .price
+{
+    font:17px Montserrat-Medium;
+    color:black;
+    margin:2px auto 0px 5px;
+}
+
+.brand
+{
+    font:13px Montserrat-Regular;
+    color:#3a3a3a;
+}
+
+.price
+{
+    font-size:13px;
+    color:rgb(255,95,51);
+    margin-bottom: 10px;
+}
+
+.title
+{
+    margin:30px auto 0px 30px;
+}
+
+.title p
+{
+    font:17px Montserrat-Medium;
+    color:rgba(204,44,0);
+    margin: auto 0px auto 0px;
+}
+
+.title img 
+{
+    width:20px;
+    height: auto;
+    margin:auto 0px auto 15px;
+}
+
+.mob_creds
+{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    background-color: #3a3a3a;
+    margin:0;
+    padding-bottom: 40px;
+    margin-top: 50px;
+}
+
+.mob_creds p:nth-child(1)
+{
+    display:flex;
+    font-size:25px;
+    font-family: Montserrat-ExtraBold;
+    color:rgb(255,95,51);
+    margin:40px auto 0px 40px;
+    letter-spacing: 2px;
+}
+
+.mob_creds div 
+{
+    display:flex;
+    margin:20px auto 0px 40px;
+}
+
+.mob_creds div a 
+{
+    display:flex;
+    margin:0px 50px 0px 0px;
+    text-decoration: none;
+    font-size:15px;
+    color:white;
+    font-family:Montserrat-Regular;
+}
+
+.mob_creds svg 
+{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    fill:white;
+}
+
+.soc 
+{
+    display:flex;
+    font-size:20px;
+    font-family: Montserrat-Bold;
+    color:white;
+    margin:30px auto 0px 40px;
+}
+
+.pc_opt, .pc_top
+{
+    display: none;
+}
+
+@media screen and (min-width:800px)
+{
+    .slide, .category, .wall, .options{display: none;}
+
+    .pc_opt
+    {
+        display: flex;
+        flex-direction: column;
+        margin:auto;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .pc_opt img
+    {
+        width:25px;
+        height: 25px;
+        margin:auto;
+    }
+
+    .pc_opt p 
+    {
+        font:12px Montserrat-Regular;
+        color:#3a3a3a;
+        margin:5px auto auto auto;
+    }
+
+    .logo
+    {
+        font:20px Montserrat-Bold;
+        letter-spacing: 2px;
+        margin:auto;
+        color:rgba(204,44,0);
+    }
+
+    .search input 
+    {
+        width:500px;
+    }
+
+    .pc_top 
+    {
+        display:flex;
+        width:fit-content;
+        max-width: 95%;
+        margin:30px auto 0px 30px;
+    }
+
+    .left
+    {
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 10px;
+        margin:0;
+        cursor: pointer;
+    }
+
+    .left img 
+    {
+        width:600px;
+        height: auto;
+    }
+
+    .left p 
+    {
+        font:15px Montserrat-Medium;
+        color:white;
+        background-color: #3a3a3a;
+        margin:0px 0px -34.64px auto;
+        padding: 8px 20px 8px 15px;
+        position: relative;
+        border-radius: 10px 0px 0px 10px;
+        bottom:47px;
+    }
+
+    .pc_cat
+    {
+        flex-direction: column;
+        margin:0px auto 0px 20px;
+    }
+
+    .pc_cat img 
+    {
+        width:160px;
+        height: auto;
+        border-radius: 10px 10px 0px 0px;
+        cursor: pointer;
+    }
+
+    .pc_cat p 
+    {
+        display: block;
+        font:15px Montserrat-Medium;
+        color:white;
+        padding:8px 0px 8px 0px;
+        background-color: #3a3a3a;
+        margin:0;
+        width:100%;
+        text-align: center;
+        border-radius: 0px 0px 10px 10px;
+        cursor: pointer;
+    }
+
+    .left p:hover, .pc_cat p:hover {background-color: #292929;}
+
+    .item:hover {background-color: rgb(218, 218, 218); outline:1px solid rgba(114, 114, 114, 0.5)}
+
+    .prod_img {width: 180px; height: 200px;}
+
+    .shop {width:95%; max-width: 95%; gap:20px}
+}

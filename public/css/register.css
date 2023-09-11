@@ -1,0 +1,203 @@
+*{-webkit-tap-highlight-color: transparent; display:flex; text-decoration: none;}
+
+head{display: none;}
+
+body
+{
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    font-size: 0;
+}
+
+.logo
+{
+    font:20px Montserrat-Bold;
+    letter-spacing: 2px;
+    margin:70px auto 0px auto;
+    color:rgba(204,44,0);
+}
+
+.mob_form
+{
+    flex-direction: column;
+    padding:20px 30px 20px 30px;
+    margin:50px auto 0px auto;
+    background-color: rgba(255,235,229);
+    border-radius: 5px;
+    max-width: 287px;
+}
+
+.head
+{
+    font:20px Montserrat-Medium;
+    color:Black;
+    margin:10px auto 0px auto;
+}
+
+.desc
+{
+    font:13px Montserrat-Regular;
+    color:rgba(0, 0, 0, 0.5);
+    margin:10px auto 0px auto;
+    text-align: center;
+}
+
+.inp
+{
+    margin:20px auto 0px auto;
+    border-radius: 10px;
+    border:1px solid rgba(114, 114, 114, 0.5);
+    padding:10px 7px 10px 7px;
+    background-color: white;
+    transition-property: border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.inp img 
+{
+    width: 20px;
+    height: 20px;
+    margin:auto 0px auto 5px;
+}
+
+.inp input 
+{
+    width:230px;
+    background-color: transparent;
+    border:none;
+    margin:auto 0px auto 10px;
+    font:12px Montserrat-Medium;
+    color:black;
+}
+
+.inp input::placeholder{font:12px Montserrat-Regular;}
+
+.inp input:focus{outline: none;}
+
+.eye
+{
+    cursor: pointer;
+    fill:rgb(102,22,0);
+    width:20px;
+    height:20px;
+    margin:0px 10px 0px auto;
+    position: relative;
+    bottom:31px;
+    right:2px;
+}
+
+button 
+{
+    font:15px Montserrat-SemiBold;
+    color:white;
+    margin:15px auto 0px auto;
+    background-color: rgb(255,95,51);
+    padding:9px 120px 9px 120px;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+}
+
+.OR 
+{
+    margin:20px auto 0px auto;
+}
+
+.OR div 
+{
+    width:115px;
+    height:0.5px;
+    background-color: rgba(114, 114, 114, 0.5);
+    margin:auto 0px auto 0px;
+}
+
+.OR p
+{
+    font:12px Montserrat-Medium;
+    color:rgba(114, 114, 114, 0.5);
+    padding:15px 14px 15px 14px;
+    border-radius: 50px;
+    border:1px solid rgba(114, 114, 114, 0.5);
+    margin:auto 0px auto 0px;
+}
+
+.social
+{
+    margin:5px auto 0px auto;
+    width:100%;
+}
+
+.social div 
+{
+    flex-direction: column;
+    margin:auto;
+}
+
+.social p
+{
+    font:10px Montserrat-Medium;
+    color:black;
+    margin:5px auto 0px auto;
+}
+
+.social img 
+{
+    width:25px;
+    height:25px;
+    padding:7px;
+    border-radius: 50px;
+    border:1px solid rgba(114, 114, 114, 0.5);
+    margin:auto;
+    cursor: pointer;
+}
+
+.reg
+{
+    margin:15px auto 50px auto;
+}
+
+.reg p, .reg a
+{
+    font:13px Montserrat-Regular;
+    color: rgba(114, 114, 114);
+    margin:0;
+}
+
+.reg a 
+{
+    color:blue;
+}
+
+.error
+{
+    display: none;
+    font:10px Montserrat-LightItalic;
+    color:red;
+    margin:2px auto 0px 10px;
+    position: relative;
+}
+
+@media screen and (min-width:800px)
+{
+    button:hover
+    {
+        background-color: rgb(189, 71, 38);
+    }
+
+    .social img:hover
+    {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .reg a:hover 
+    {
+        text-decoration: underline;
+    }
+
+    .mob_form
+    {
+        padding:20px 40px 20px 40px;
+    }
+}

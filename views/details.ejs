@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>E-Commerce | Product</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts.css">
+        <link rel="stylesheet" href="../css/details.css">
+    </head>
+    <body>
+        <a href="/home" class="back"><img src="../images/arrow-left-long-solid.svg" alt="back"></a>
+
+        <p class="prod_name"><%= name %></p>
+        <img src="../images/4stars1.png" alt="stars" class="stars">
+        <p class="desc"><%= desc %></p>
+        <p class="price"><%= price %></p>
+
+        <img class="prod_img" src="<%= img %>" alt="prod">
+
+        <p class="abt">About this Product</p>
+        <div class="ans"><p>Brand :</p><p>&nbsp&nbsp <%= brand %></p></div>
+        <div class="ans"><p>Model Name :</p><p>&nbsp&nbsp <%= model %></p></div>
+        <div class="ans"><p>Color :</p><p>&nbsp&nbsp <%= color %></p></div>
+        <div class="ans"><p>Availability :</p><p>&nbsp&nbsp <%= stock %></p></div>
+
+        <% if (present==false) { %>
+            <a href="/addCart/<%= id %>" class="addtocart"><p>Add to Cart</p><img src="../images/cart-arrow-down-solid.svg" alt="cart"></a>
+        <% } else{ %>
+            <div class="addtocart" style="cursor: default;"><p>Added to Cart</p><img src="../images/circle-check-regular.svg" alt="cart"></div>
+        <% } %>
+
+        <% if (Wpresent==false) { %>
+            <a href="/addtoWishlist/<%= id %>" class="addtocart" style="margin: 15px auto 70px auto; background-color: white; outline: 1px solid #3a3a3a;"><p>Add to Wishlist</p><img src="../images/medal-solid.svg" alt="cart"></a>
+        <% } else{ %>
+            <a href="/addtoWishlist/<%= id %>" class="addtocart" style="margin: 15px auto 70px auto; background-color: white; outline: 1px solid #3a3a3a; cursor: default; pointer-events: none;"><p>Added to Wishlist</p><img src="../images/circle-check-regular.svg" alt="cart"></a>
+        <% } %>
+
+        <div class="pc_grid">
+            <img class="prod_img" src="<%= img %>" alt="prod">
+            
+            <div class="right">
+                <p class="desc"><%= desc %></p>
+                <p class="price"><%= price %></p>
+
+                <p class="abt">About this Product</p>
+                <div class="ans"><p>Brand :</p><p>&nbsp&nbsp <%= brand %></p></div>
+                <div class="ans"><p>Model Name :</p><p>&nbsp&nbsp <%= model %></p></div>
+                <div class="ans"><p>Color :</p><p>&nbsp&nbsp <%= color %></p></div>
+                <div class="ans"><p>Availability :</p><p>&nbsp&nbsp <%= stock %></p></div>
+
+                <% if (present==false) { %>
+                    <a href="/addCart/<%= id %>" class="addtocart"><p>Add to Cart</p><img src="../images/cart-arrow-down-solid.svg" alt="cart"></a>
+                <% } else{ %>
+                    <div class="addtocart" style="cursor: default;"><p>Added to Cart</p><img src="../images/circle-check-regular.svg" alt="cart"></div>
+                <% } %>
+                
+                <% if (Wpresent==false) { %>
+                    <a href="/addtoWishlist/<%= id %>" class="addtocart" style="margin: 15px auto 70px auto; background-color: white; outline: 1px solid #3a3a3a;"><p>Add to Wishlist</p><img src="../images/medal-solid.svg" alt="cart"></a>
+                <% } else{ %>
+                    <a href="/addtoWishlist/<%= id %>" class="addtocart" style="margin: 15px auto 70px auto; background-color: white; outline: 1px solid #3a3a3a; cursor: default; pointer-events: none;"><p>Added to Wishlist</p><img src="../images/circle-check-regular.svg" alt="cart"></a>
+                <% } %>
+            </div>
+        </div>
+        <div class="hr"></div>
+
+        <% if (exists==true) { %>
+            <p class="title">You have already added a Review for this Product!</p>
+        <% } else { %>
+            <form class="reviews" action="/review/<%= id %>" method="post" autocomplete="off">
+                <p>Add a Review</p>
+                <textarea name="user_review"></textarea>
+                <input type="submit" value="Post Review">
+            </form>
+        <% } %>
+
+        <p class="title">See other Reviews</p>    
+        <div class="comments">
+            <% for (let i=0; i<rs.length; i++) { %>
+                <div class="comment">
+                    <div><img src="../images/circle-user-regular.svg" alt="user"><p><%= rs[i].Rev_user %></p></div>
+                    <p class="content"><%= rs[i].Rev %></p>
+                </div>
+            <% } %>
+        </div>
+
+        <script src="../js/details.js"></script>
+    </body>
+</html>

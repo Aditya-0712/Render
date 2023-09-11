@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>E-Commerce | Wishlist</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/fonts.css">
+        <link rel="stylesheet" href="../css/wishlist.css">
+    </head>
+    <body>
+        <a href="/home" class="back"><img src="../images/arrow-left-long-solid.svg" alt="back"></a>
+        <p class="title">Your Wishlist</p>
+
+        <div class="shop">
+            <% for(let i=0; i<arr.length; i++) { %>
+                <div class="item" onclick="window.location.href='/details/<%= arr[i]._id %>'">
+                    <img src="<%= arr[i].Prod_img %>" alt="product" class="prod_img">
+                    <img src="../images/4stars1.png" alt="stars" class="stars"><p class="name"><%= arr[i].Prod_name %></p><p class="brand"><%= arr[i].Prod_brand %></p><p class="price"><%= arr[i].Prod_price %></p>
+                    <a href="/delFromWish/<%= arr[i]._id %>" class="del"><img src="../images/trash-can-regular.svg" alt="del"></a>
+                </div>
+            <% } %>
+        </div>
+
+        <a href="/wishtocart" class="addtocart"><p>Add to Cart</p><img src="../images/cart-arrow-down-solid.svg" alt="cart"></a>
+    </body>
+</html>

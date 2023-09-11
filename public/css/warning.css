@@ -1,0 +1,48 @@
+*{display:flex; -webkit-tap-highlight-color: transparent; text-decoration: none;}
+
+head{display: none;}
+
+body
+{
+    flex-direction: column;
+    margin:0;
+    width:100%;
+    font-size: 0;
+}
+
+.logo
+{
+    font:20px Montserrat-Bold;
+    letter-spacing: 2px;
+    margin:70px auto 0px auto;
+    color:rgba(204,44,0);
+}
+
+.desc
+{
+    font:15px Montserrat-Medium;
+    color:#3a3a3a;
+    margin:20px auto 0px auto;
+}
+
+a:nth-child(3), a:nth-child(4)
+{
+    font:15px Montserrat-SemiBold;
+    color:white;
+    background-color: coral;
+    border: 1px solid coral;
+    padding:7px 40px 7px 40px;
+    border-radius: 50px;
+    margin:40px auto 0px auto;
+}
+
+a:nth-child(3):hover {background-color: rgb(219, 109, 69);}
+
+a:nth-child(4)
+{
+    background-color: white;
+    color:#3a3a3a;
+    border: 1px solid #3a3a3a;
+    margin-top: 10px;
+}
+a:nth-child(4):hover{background-color: rgb(212, 212, 212);}
